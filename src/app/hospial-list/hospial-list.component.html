@@ -1,0 +1,55 @@
+<div class="row g-0">
+    <div class="col-md-6 g-0">
+        <div class="leftside">
+            <p id="words">HOSPITALS NEAR BY ME</p>
+            <div *ngFor="let list of listHospital; let i = index" (click)="onclick(list,i)" [ngClass]="{'g2' : selectedind==i, 'g1': selectedind!=i}">
+                <app-hospital-list-item [List_item]="list" ></app-hospital-list-item>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 g-0">
+        <div class="rightside">
+            <div *ngIf="value">
+               <app-hospitalview [selector]="selected" [url]="urlSafe"></app-hospitalview>
+            </div>
+            <div>
+                <div *ngIf="!value">
+                    <div class="container">] <div class=" text-center mt-5 ">
+                        <h1>SUGGESSTION FORM</h1>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-7 mx-auto">
+                            <div class="card mt-2 mx-auto p-4 bg-light">
+                                <div class="card-body bg-light">
+                                    <div class="container">
+                                        <form id="contact-form" role="form">
+                                            <div class="controls">
+                                                <div class="row" style="padding: 20px;">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group"> <label for="form_name">Firstname *</label> <input id="form_name" [(ngModel)]="formholder" type="text" name="name" class="form-control" placeholder="NAME*" required="required" data-error="Firstname is required."> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding: 20px;">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" [(ngModel)]="formemail" type="email" name="email" class="form-control" placeholder="EMAIL*" required="required" data-error="Valid email is required."> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding: 20px;">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group"> <label for="form_message">Message *</label> <textarea id="form_message" [(ngModel)]="formmessage" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding: 20px;"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Send Message" (click)="onsubmit()"> </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> <!-- /.8 -->
+                        </div> <!-- /.row-->
+                    </div>
+                </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

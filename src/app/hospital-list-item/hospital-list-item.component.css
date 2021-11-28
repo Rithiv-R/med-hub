@@ -1,0 +1,14 @@
+
+.hospital{
+    padding: 40px;
+    display: flex;
+    flex: 1 1 auto;
+    border: black;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-items: center;
+}
