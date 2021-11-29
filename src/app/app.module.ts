@@ -18,6 +18,14 @@ import { ApplicationDoctoHospitalComponent } from './application-docto-hospital/
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { ApplicationDocComponent } from './application-doc/application-doc.component';
 import { ApplicationHosComponent } from './application-hos/application-hos.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { DoctorItemComponent } from './doctor-item/doctor-item.component';
+import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+import { DoctorLocationComponent } from './doctor-location/doctor-location.component';
+import { DoctorOverviewComponent } from './doctor-overview/doctor-overview.component';
+import { DoctorContactComponent } from './doctor-contact/doctor-contact.component';
+import { DoctorDetailsCardComponent } from './doctor-details-card/doctor-details-card.component';
+import { DoctorPatientComponent } from './doctor-patient/doctor-patient.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +42,15 @@ import { ApplicationHosComponent } from './application-hos/application-hos.compo
     ApplicationDoctoHospitalComponent,
     ApplicationFormComponent,
     ApplicationDocComponent,
-    ApplicationHosComponent
+    ApplicationHosComponent,
+    DoctorListComponent,
+    DoctorItemComponent,
+    DoctorViewComponent,
+    DoctorLocationComponent,
+    DoctorOverviewComponent,
+    DoctorContactComponent,
+    DoctorDetailsCardComponent,
+    DoctorPatientComponent
   ],
   imports: [
     BrowserModule,
